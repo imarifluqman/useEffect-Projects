@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./debounced-input.css";
 
 const DebouncedInput = () => {
   const [query, setQuery] = useState("");
@@ -18,16 +19,25 @@ const DebouncedInput = () => {
   }, [query]);
 
   const clearInput = () => {
-    setQuery(""); // Clear the query (input field)
-    setDebounced(""); // Optionally clear the debounced value
+    setQuery("");
+    setDebounced("");
   };
 
   return (
-    <div>
-      <h1>DebouncedInput</h1>
-      <input type="text" value={query} onChange={handleQuery} />
-      <button onClick={clearInput}>Clear Input Field</button>
-      <p>Debounced Search Query: {debounced}</p>
+    <div className="debounced-input-container">
+      <div className="debounced-input">
+        <h1>Debounced Input</h1>
+
+        <input
+          type="text"
+          value={query}
+          onChange={handleQuery}
+          placeholder="Type something..."
+        />
+        <button onClick={clearInput}>Clear Input Field</button>
+
+        <p>Debounced Search Query: {debounced}</p>
+      </div>
     </div>
   );
 };

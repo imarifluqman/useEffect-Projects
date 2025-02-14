@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
+import "./online-status.css"; 
 
 const OnlineStatus = () => {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
 
   // Check event type and update state accordingly
   const handleStatusChanged = () => {
-    setIsOnline(event.type === "online");
+    setIsOnline(navigator.onLine);
   };
 
   useEffect(() => {
@@ -21,9 +22,18 @@ const OnlineStatus = () => {
   }, []);
 
   return (
-    <div>
-      <h1>OnlineStatus Checker</h1>
-      <p>{isOnline ? "You are online" : "You are offline"}</p>
+    <div className="online-status-main">
+      <div className="online-status-container">
+        <h1>Online Status Checker</h1>
+        <p>Your current internet status:</p>
+        <div
+          className={`status-indicator ${
+            isOnline ? "status-online" : "status-offline"
+          }`}
+        >
+          {isOnline ? "Online" : "Offline"}
+        </div>
+      </div>
     </div>
   );
 };

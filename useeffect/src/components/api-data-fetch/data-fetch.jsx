@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './data-fetch.css';
 
 const DataFetching = () => {
   const [data, setData] = useState([]);
@@ -14,31 +15,31 @@ const DataFetching = () => {
   useEffect(() => {
     fetchData()
       .then((data) => {
-        console.log(data);
         setData(data);
         setLoading(false);
       })
       .catch((error) => {
-        console.log(data);
         setError(error);
         setLoading(false);
       });
   }, []);
 
   return (
-    <div>
-      <h1>DataFetching</h1>
-      {loading ? (
-        <div>loading...</div>
-      ) : error ? (
-        <div>Error: {error.message}</div>
-      ) : (
-        <ul>
-          {data.map((user) => {
-            return <li key={user.id}>{user.email}</li>;
-          })}
-        </ul>
-      )}
+    <div className="data-fetch-container">
+      <div className="data-fetch-box">
+        <h1>Data Fetching</h1>
+        {loading ? (
+          <div className="loading">Loading...</div>
+        ) : error ? (
+          <div className="error">Error: {error.message}</div>
+        ) : (
+          <ul className="data-list">
+            {data.map((user) => {
+              return <li key={user.id} className="data-item">{user.email}</li>;
+            })}
+          </ul>
+        )}
+      </div>
     </div>
   );
 };

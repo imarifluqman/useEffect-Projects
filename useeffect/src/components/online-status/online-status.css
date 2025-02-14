@@ -1,0 +1,62 @@
+.online-status-main {
+  font-family: Arial, sans-serif;
+  background-color: #74af05;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.online-status-container {
+  text-align: center;
+  background-color: #ffffff;
+  color: #74af05;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 90%;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.status-indicator {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: #ffffff;
+}
+
+.status-online {
+  background-color: #74af05;
+}
+
+.status-offline {
+  background-color: #c00303;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .status-indicator {
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

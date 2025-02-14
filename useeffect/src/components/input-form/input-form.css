@@ -1,0 +1,128 @@
+/* Container Style */
+.input-form-container {
+  background-color: #4c000f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Form Box Style */
+.input-form-box {
+  background-color: #eadec4;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  box-sizing: border-box;
+  max-height: none;
+  word-wrap: break-word;
+}
+
+/* Title Styling */
+.input-form-box h1 {
+  font-size: 2rem;
+  color: #4c000f;
+  margin-bottom: 1.5rem;
+}
+
+/* Input Field Styling */
+.input-form-box input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  border: 2px solid #4c000f;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+  color: #333;
+  word-wrap: break-word; /* Ensure input text wraps when too long */
+}
+
+.input-form-box input:focus {
+  outline: none;
+  border-color: #eadec4;
+  background-color: #f7f7f7;
+}
+
+/* Logged Values List Styling */
+.input-form-box h2 {
+  font-size: 1.5rem;
+  color: #4c000f;
+  margin-bottom: 1rem;
+}
+
+.input-form-box ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-y: auto; /* Allows scrolling if needed */
+  max-height: 250px; /* Limit the height of the list */
+}
+
+.input-form-box li {
+  background-color: #fff;
+  padding: 0.8rem;
+  margin-bottom: 0.8rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  color: #333;
+  transition: background-color 0.3s ease;
+  word-wrap: break-word; /* Ensures list items wrap text */
+}
+
+.input-form-box li:hover {
+  background-color: #4c000f;
+  color: #eadec4;
+}
+
+/* Responsive Design for Tablets and Mobile */
+@media (max-width: 768px) {
+  .input-form-box {
+    padding: 1.5rem;
+  }
+
+  .input-form-box h1 {
+    font-size: 1.75rem;
+  }
+
+  .input-form-box input {
+    font-size: 1rem;
+  }
+
+  .input-form-box h2 {
+    font-size: 1.25rem;
+  }
+
+  .input-form-box li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-form-box h1 {
+    font-size: 1.5rem;
+  }
+
+  .input-form-box input {
+    font-size: 0.9rem;
+  }
+
+  .input-form-box h2 {
+    font-size: 1rem;
+  }
+
+  .input-form-box li {
+    font-size: 0.9rem;
+  }
+}

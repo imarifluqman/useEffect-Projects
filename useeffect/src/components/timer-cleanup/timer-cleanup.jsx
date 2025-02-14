@@ -1,5 +1,5 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import "./timer-cleanup.css"; // Import the CSS file
 
 const TimerCleanup = () => {
   const [count, setCount] = useState(0);
@@ -15,10 +15,12 @@ const TimerCleanup = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Timer Cleanup</h1>
-      <h2>Second : {count}</h2>
-    </div>
+      <div className="timer-container">
+        <h1 className="title">Timer Cleanup</h1>
+        <div className="box">
+          <h2 className="seconds">Seconds: {count}</h2>
+        </div>
+      </div>
   );
 };
 

@@ -1,29 +1,33 @@
-import './App.css'
-import DataFetching from './components/api-data-fetch/data-fetch'
-import Counter from './components/counter/counter'
-import DebouncedInput from './components/debounced-input/debounced-input'
-import Search from './components/debounced-input/debounced-input'
-import InputForm from './components/input-form/input-form'
-import OnlineStatus from './components/online-status/online-status'
-import ThemeSwitcher from './components/theme-switcher/theme-switcher'
-import TimerCleanup from './components/timer-cleanup/timer-cleanup'
-import WindowResize from './components/window-resize/window-resize'
+import "./App.css";
+import { data } from "./data/data";
+import { Link } from "react-router-dom";
 
 function App() {
-
-
   return (
     <>
-    {/* <Counter/> */}
-    {/* <DataFetching/> */}
-    {/* <WindowResize/> */}
-    {/* <TimerCleanup/> */}
-    {/* <InputForm/> */}
-    {/* <ThemeSwitcher/> */}
-    {/* <OnlineStatus/> */}
-    <DebouncedInput/>
+    <div className="main-body">
+      <div className="main-header">
+
+      <h1>UseEffect Projects</h1>
+      </div>
+      <div className="main-container">
+        {data.map((item) => (
+          <Link to={item.link} key={item.id} style={{ textDecoration: "none" }}>
+            <div className="card-container">
+              <div className="image-container">
+                <img src={item.image} alt={item.name} className="image-box" />
+              </div>
+              <div>
+                <h1 className="main-heading">{item.name}</h1>
+                <button className="main-btn" style={{ backgroundColor: item.bgColor, color: item.color }}>{item.button}</button>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

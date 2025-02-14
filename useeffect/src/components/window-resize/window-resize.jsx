@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./window-resize.css"; // Make sure to create this CSS file
 
 const WindowResize = () => {
   const [windowWidth, setWindowWidth] = useState({
@@ -19,11 +20,14 @@ const WindowResize = () => {
       window.removeEventListener("resize", detectWindowSize);
     };
   }, []);
+
   return (
-    <div>
-      <h1>WindowResize</h1>
-      <p>Current Width Of Window {windowWidth.winWidth}</p>
-      <p>Current Height Of Window {windowWidth.winHeight}</p>
+    <div className="window-body">
+    <div className="window-resize-container">
+      <h1 className="title">Window Resize</h1>
+      <p className="info">Current Width: {windowWidth.winWidth}</p>
+      <p className="info">Current Height: {windowWidth.winHeight}</p>
+    </div>
     </div>
   );
 };

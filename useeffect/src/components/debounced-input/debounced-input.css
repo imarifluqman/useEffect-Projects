@@ -1,0 +1,108 @@
+/* Debounced Input Container */
+.debounced-input-container {
+  background-color: #002783;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 1rem;
+}
+
+.debounced-input {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 3rem 4rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.debounced-input h1 {
+  font-size: 2rem;
+  color: #002783;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.debounced-input input {
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease, transform 0.2s ease;
+  width: 90%;
+}
+
+.debounced-input input:focus {
+  border-color: #002783;
+  transform: scale(1.02);
+}
+
+.debounced-input input::placeholder {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.debounced-input button {
+  padding: 12px 16px;
+  background-color: #002783;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%;
+}
+
+.debounced-input button:hover {
+  background-color: #022c8f;
+  transform: scale(1.05);
+}
+
+.debounced-input p {
+  font-size: 1.2rem;
+  color: #002783;
+  text-align: center;
+  margin-top: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+  white-space: normal;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .debounced-input {
+    padding: 2rem 3rem;
+  }
+  .debounced-input h1 {
+    font-size: 1.75rem;
+  }
+  .debounced-input input,
+  .debounced-input button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .debounced-input {
+    padding: 1.5rem 2rem;
+  }
+  .debounced-input h1 {
+    font-size: 1.5rem;
+  }
+  .debounced-input input,
+  .debounced-input button {
+    font-size: 0.9rem;
+  }
+}

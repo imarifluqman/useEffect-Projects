@@ -12,10 +12,10 @@ const ThemeSwitcher = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
   return (
-    <div>
+    <div className="theme-container">
       <h1>ThemeSwitcher</h1>
       <p>Current Theme : {theme}</p>
-      <button onClick={toggleTheme}>Switch Theme</button>
+      <button onClick={toggleTheme} className="theme-btn">Switch Theme</button>
     </div>
   );
 };
