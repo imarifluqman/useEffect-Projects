@@ -8,7 +8,7 @@ function App() {
     <div className="main-body">
       <div className="main-header">
 
-      <h1>UseEffect Projects</h1>
+      <h1>UseEffect Projects...!</h1>
       </div>
       <div className="main-container">
         {data.map((item) => (
